@@ -21,6 +21,6 @@ public class AnonymizationController {
 
   @RequestMapping("/health")
   public String healthCheck() {
-    return "health";
+    return "App has started successfully!";
   }
 }
