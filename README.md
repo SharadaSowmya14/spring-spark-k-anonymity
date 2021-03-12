@@ -12,6 +12,22 @@ Implements K-Anonymization in a distributed manner using:
 2. Install Maven as described in [Installing Apache Maven](https://maven.apache.org/install.html) 
 3. Install Apache Spark in [Spark Overview](https://spark.apache.org/docs/latest/) 
 
+## Project Structure
+```
+├───java
+│   └───com
+│       └───spark
+│           ├───arx 
+│           ├───car_basic
+│           ├───controllers
+│           ├───data_generator
+│           ├───file_utils
+│           └───spark_config
+└───resources
+    ├───input-data
+    └───output-data
+```
+
 ## Build and Run
 - Build the project by installing all dependencies required using the below command:
 ```
