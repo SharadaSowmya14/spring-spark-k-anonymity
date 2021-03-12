@@ -8,9 +8,9 @@ Implements K-Anonymization in disrtibuted manner using:
 - ARX library for applying K-Anonymization on partitioned data set.
 
 ## Prerequisites
-1. Install Java
-2. Install Maven
-3. Install Apache Spark
+1. Install Java as described in [How do I install Java?](https://java.com/en/download/help/download_options.html) 
+2. Install Maven as described in [Installing Apache Maven](https://maven.apache.org/install.html) 
+3. Install Apache Spark in [Spark Overview](https://spark.apache.org/docs/latest/) 
 
 ## Build and Run
 - Build the project by installing all dependencies required using the below command:
