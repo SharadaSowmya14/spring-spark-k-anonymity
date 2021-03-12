@@ -1,5 +1,5 @@
 # Spring-Spark-K-Anonymity
-This repository contains Spring-boot application with services exposed to generate and anonymize car data sets in a disrtibuted manner.
+This repository contains Spring-boot application with services exposed to generate and anonymize data sets in a disrtibuted manner.
 
 ## Description
 Implements K-Anonymization in disrtibuted manner using:
@@ -21,5 +21,18 @@ mvn clean install
 ```
 mvn spring-boot:run
 ```
+The application will run on port ```8080``` by default
 
+## Testing
+1. For generating data set run the below Standalone Java application:
+```
+javac DataSetGenerator.java
+java DataSetGenerator.java
+```
+2. Service requests available:
+
+| Method | Request | Description |
+| --- | --- | --- |
+| POST | /api/health | Reports if the application has started. |
+| POST | /api/anonymize | Anonymizes the created data set. |
 
