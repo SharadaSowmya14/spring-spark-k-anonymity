@@ -30,8 +30,8 @@ javac DataSetGenerator.java
 java DataSetGenerator.java
 ```
 2. To increase the number of records in the data set, the below-mentioned strategies can be used:
-    - By icreasing the number of cars.
-    - By capturing latitude and longitude for shorter distance intervals.
+    - Increasing the number of cars.
+    - Capturing latitude and longitude for shorter distance intervals.
 
 ## Anonymization
 1. Below endpoints are exposed as part of the Spring application.
