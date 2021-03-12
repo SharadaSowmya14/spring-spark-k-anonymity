@@ -42,10 +42,10 @@ java DataSetGenerator.java
 | POST | /api/anonymize | Anonymizes the created data set. |
 
 2. The number of partitions can be altered as shown below.
-```
+```java
 sparkConfigurator.loadDataSource(carSchema, 20);
 ```
 3. The K-value can be specified as shown below.
-```
+```java
 config.addPrivacyModel(new KAnonymity(10));
 ```
