@@ -1,8 +1,8 @@
 # Spring-Spark-K-Anonymity
-This repository contains Spring-boot application with services exposed to generate and anonymize data sets in a disrtibuted manner.
+This repository contains a Spring-boot application with services exposed to generate and anonymize data sets in a distributed manner.
 
 ## Description
-Implements K-Anonymization in disrtibuted manner using:
+Implements K-Anonymization in a distributed manner using:
 - Apache Spark for partitioning and merging of data set.
 - Executor Service for asynchronous anonymization of partitions.
 - ARX library for applying K-Anonymization on partitioned data set.
@@ -21,18 +21,31 @@ mvn clean install
 ```
 mvn spring-boot:run
 ```
-The application will run on port ```8080``` by default
+The application will run on port ```8080``` by default.
 
-## Testing
-1. For generating data set run the below Standalone Java application:
+## Data Set Generation
+1. For generating data set, run the below Standalone Java application:
 ```
 javac DataSetGenerator.java
 java DataSetGenerator.java
 ```
-2. Service requests available:
+2. To increase the number of records in the data set, the below-mentioned strategies can be used:
+    - By icreasing the number of cars.
+    - By capturing latitude and longitude for shorter distance intervals.
+
+## Anonymization
+1. Below endpoints are exposed as part of the Spring application.
 
 | Method | Request | Description |
 | --- | --- | --- |
 | POST | /api/health | Reports if the application has started. |
 | POST | /api/anonymize | Anonymizes the created data set. |
 
+2. The number of partitions can be altered as shown below.
+```
+sparkConfigurator.loadDataSource(carSchema, 20);
+```
+3. The K-value can be specified as shown below.
+```
+config.addPrivacyModel(new KAnonymity(10));
+```
